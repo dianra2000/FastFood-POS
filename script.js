@@ -3,11 +3,11 @@ let products = [
     { id: 1, name: "Classic Burger", price: 8.99, category: "burgers", image: "images/burger1.jpg" },
     { id: 2, name: "Cheese Burger", price: 9.99, category: "burgers", image: "images/burger2.jpg" },
     { id: 3, name: "Bacon Burger", price: 10.99, category: "burgers", image: "images/burger1.jpg" },
-    { id: 4, name: "French Fries", price: 3.99, category: "fries", image: "images/fries.jpg" },
-    { id: 5, name: "Sweet Potato Fries", price: 4.99, category: "fries", image: "images/fries.jpg" },
-    { id: 6, name: "Coca Cola", price: 1.99, category: "drinks", image: "images/drink.jpg" },
-    { id: 7, name: "Orange Juice", price: 2.49, category: "drinks", image: "images/drink.jpg" },
-    { id: 8, name: "Coffee", price: 2.99, category: "drinks", image: "images/drink.jpg" }
+    { id: 4, name: "French Fries", price: 3.99, category: "fries", image: "images/fries1.jpg" },
+    { id: 5, name: "Sweet Potato Fries", price: 4.99, category: "fries", image: "images/fries2.jpg" },
+    { id: 6, name: "Coca Cola", price: 1.99, category: "drinks", image: "images/drink1.jpg" },
+    { id: 7, name: "Orange Juice", price: 2.49, category: "drinks", image: "images/drink2.jpg" },
+    { id: 8, name: "Coffee", price: 2.99, category: "drinks", image: "images/drink3.jpg" }
 ];
 
 let customers = [
