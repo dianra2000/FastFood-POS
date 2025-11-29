@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrillMaster POS - Burger Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>🍔 GrillMaster POS</h1>
+            </div>
+            <div class="date-time">
+                <span id="current-date"></span>
+                <span id="current-time"></span>
+            </div>
+        </header>
+
+        <main>
+            <!-- Products Section -->
+            <section class="products-section">
+                <h2>Menu</h2>
+                <div class="category-tabs">
+                    <button class="tab-btn active" data-category="burgers">Burgers</button>
+                    <button class="tab-btn" data-category="fries">Fries</button>
+                    <button class="tab-btn" data-category="drinks">Drinks</button>
+                </div>
+                
+                <div class="products-grid" id="products-container">
+                    <!-- Products will be dynamically loaded here -->
+                </div>
+            </section>
+
+            <!-- Order Section -->
+            <section class="order-section">
+                <h2>Current Order</h2>
+                <div class="customer-info">
+                    <input type="text" id="customer-name" placeholder="Customer Name">
+                    <input type="tel" id="customer-phone" placeholder="Phone Number">
+                </div>
+                
+                <div class="order-items" id="order-items">
+                    <!-- Order items will appear here -->
+                    <p class="empty-order">No items added yet</p>
+                </div>
+                
+                <div class="order-summary">
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tax (10%):</span>
+                        <span id="tax">$0.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total:</span>
+                        <span id="total">$0.00</span>
+                    </div>
+                </div>
+                
+                <div class="order-actions">
+                    <button id="checkout-btn" class="btn-primary">Complete Order</button>
+                    <button id="clear-btn" class="btn-secondary">Clear Order</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Order History Modal -->
+        <div id="order-history-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Order History</h2>
+                <div id="order-history">
+                    <!-- Order history will appear here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Management Section -->
+        <section class="management-section">
+            <h2>Management</h2>
+            <div class="management-tabs">
+                <button class="mgmt-tab-btn active" data-tab="products">Products</button>
+                <button class="mgmt-tab-btn" data-tab="customers">Customers</button>
+                <button class="mgmt-tab-btn" data-tab="orders">Orders</button>
+            </div>
+            
+            <!-- Products Management -->
+            <div id="products-management" class="management-content active">
+                <h3>Product Management</h3>
+                <form id="product-form">
+                    <input type="text" id="product-name" placeholder="Product Name" required>
+                    <input type="number" id="product-price" placeholder="Price" step="0.01" required>
+                    <select id="product-category" required>
+                        <option value="">Select Category</option>
+                        <option value="burgers">Burgers</option>
+                        <option value="fries">Fries</option>
+                        <option value="drinks">Drinks</option>
+                    </select>
+                    <input type="text" id="product-image" placeholder="Image URL">
+                    <button type="submit">Add Product</button>
+                </form>
+                <div class="items-list" id="products-list">
+                    <!-- Products list will appear here -->
+                </div>
+            </div>
+            
+            <!-- Customers Management -->
+            <div id="customers-management" class="management-content">
+                <h3>Customer Management</h3>
+                <form id="customer-form">
+                    <input type="text" id="customer-form-name" placeholder="Customer Name" required>
+                    <input type="tel" id="customer-form-phone" placeholder="Phone Number" required>
+                    <input type="email" id="customer-form-email" placeholder="Email">
+                    <button type="submit">Add Customer</button>
+                </form>
+                <div class="items-list" id="customers-list">
+                    <!-- Customers list will appear here -->
+                </div>
+            </div>
+            
+            <!-- Orders Management -->
+            <div id="orders-management" class="management-content">
+                <h3>Order Management</h3>
+                <button id="view-history-btn">View Order History</button>
+                <div class="items-list" id="orders-list">
+                    <!-- Orders list will appear here -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
